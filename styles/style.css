@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --cor-primaria: #bb0180;
+  --cor-secundaria: #A91079;
+  --cor-terciaria: #570A57;
+  --cor-quartenaria: #0b0011;
+  --cor-houver: #2E0249;
+  --fonte-primaria: 'Krona One', sans-serif;
+  --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+}
+
+.neon-triangle {
+  position: fixed;
+  z-index: -1;
+  width: 300px;
+  height: 300px;
+  background-image: linear-gradient(45deg, #ff00f0, #00ffea);
+  transform: rotate(45deg);
+}
+
+#triangle1 {
+  top: 0;
+  left: 0;
+}
+
+#triangle2 {
+  bottom: 0;
+  right: 0;
+}
+
+.cabecalho {
+  padding: 2% 5%;
+}
+
+.cabecalho__menu {
+  display: flex;
+  gap: 80px;
+}
+
+.cabecalho__menu__link {
+  font-family: var(--fonte-secundaria);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cor-terciaria);
+  text-decoration: none;
+}
+
+.apresentacao {
+  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 82px;
+}
+
+.apresentacao__conteudo {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.titulo-destaque {
+  color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__titulo {
+  font-size: 2.25rem;
+  font-family: var(--fonte-primaria);
+}
+
+.apresentacao__conteudo__texto {
+  font-size: 1.5rem;
+  font-family: var(--fonte-secundaria);
+  color: var(--cor-primaria);
+}
+
+.apresentacao__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+  font-family: var(--fonte-primaria);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.apresentacao__links__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border: 2px solid var(--cor-terciaria);
+  width: 23.62rem;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 21.5px 0;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  font-family: var(--fonte-secundaria);
+  border: none;
+  background-color: black;
+  box-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 10px #ff08ff, 0 0 10px #ff00ff, 0 0 10px #ff00ff;
+}
+
+.linkcurriculo:hover {
+  box-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #ff00ff, 0 0 3px #ff00ff, 0 0 3px #ff08ff, 0 0 3px #ff00ff, 0 0 3px #ff00ff;
+}
+
+.apresentacao__links__link:hover {
+  background-color: var(--cor-houver);
+}
+
+@media (max-width: 768px) {
+  
+  .apresentacao__links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .apresentacao__links__link {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.apresentacao__img {
+  width: 38%;
+  margin-top: -15%;
+  margin-bottom: 5rem;
+}
+
+.rodape {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--cor-quartenaria);
+  font-family: var(--fonte-secundaria);
+  font-size: 0.93rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.rodape__texto {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rodape__icones {
+  display: flex;
+  align-items: center;
+}
+
+.rodape__icones__img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 768px) {
+  .apresentacao {
+    flex-direction: row;
+  }
+
+  .apresentacao__conteudo {
+    width: 50%;
+  }
+
+  .apresentacao__img {
+    width: 38%;
+    margin-top: 0;
+  }
+
+  .rodape {
+    flex-direction: row;
+  }
+
+  .rodape__texto {
+    text-align: left;
+    flex-grow: 1;
+  }
+
+  .rodape__icones {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .neon-triangle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* configuração botão dark mode */
+
+body.dark {
+  background-image: linear-gradient(to top left, #570A57, #0b0011, #0b0011, #0b0011, #570A57);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  background-size: 100% 100%;
+  transition: background 0.4s linear;
+  background: #000000;
+}
+
+body.light {
+  transition: background 0.4s linear;
+  background: #fafafa;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background: linear-gradient(91deg, #ff00f0, #00ffea);
+  width: 55px;
+  height: 30px;
+  border-radius: 50px;
+  position: absolute;
+  cursor: pointer;
+  margin: 1vw;
+  top: 1.4vh;
+  right: 2.5vw;
+  z-index: auto;
+}
+
+.label .ball {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  background-color: #000000;
+  border-radius: 50%;
+  left: 5px;
+  top: 2px;
+  transform: translateX(-2px);
+  transition: transform 0.5s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label .ball::before {
+  content: "OFF";
+  position: absolute;
+  color: #d4d4d4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  padding: 0;
+}
+
+.checkbox:checked + .label .ball::before {
+  content: "ON";
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(21px);
+}
+
+.toggle-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .toggle .label {
+    width: 45px;
+    height: 25px;
+    margin: 0;
+    top: 1vh;
+    right: 1.5vw;
+  }
+
+  .toggle .label .ball {
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    top: 3px;
+  }
+
+  .toggle .label .ball::before {
+    font-size: 9px;
+  }
+
+  .toggle .checkbox:checked + .label .ball {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cabecalho {
+    padding: 2% 2%;
+  }
+  
+  .cabecalho__menu {
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .cabecalho__menu__link {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+
+  .cabecalho__menu {
+    margin-top: 40px; 
+  }
+}
